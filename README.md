@@ -31,13 +31,13 @@ Implement error handling for the API to respond with appropriate messages and st
 Invalid data input (e.g., missing required fields).
 Any errors that occur during the job processing.
 
-### Documentation: 
-
+### Documentation:
 Briefly document the following in a README file:
 Instructions on setting up the project and running migrations.
 A simple explanation of how to test the API endpoint.
 Write a simple Unit test.
-Deliverables
+
+### Deliverables:
 Source code for the Laravel project, including all migrations, models, controllers, jobs, and event classes.
 A README file with setup and testing instructions.
 Submission Instructions
