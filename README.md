@@ -1,10 +1,10 @@
 # Laravel API with Job Queue, Database, and Event Handling
 
-##Objective
+## Objective
 Create a Laravel API that demonstrates your proficiency with Laravel's job queues, database operations, migrations, and event handling. This test should take approximately 2-3 hours to complete.
 
-##Requirements
-###API Endpoint: 
+## Requirements
+### API Endpoint: 
 Develop a single API endpoint `/submit` that accepts a `POST` request with the following JSON payload structure:
 
 {
@@ -13,20 +13,20 @@ Develop a single API endpoint `/submit` that accepts a `POST` request with the f
 "message": "This is a test message."
 }
 
-###Validate the data: 
+### Validate the data: 
 (ensure `name`, `email`, and `message` are present).
 
-###Database Setup: 
+### Database Setup: 
 Use Laravel migrations to create a table named `submissions` with columns for `id`, `name`, `email`, `message`, and timestamps (`created_at` and `updated_at`).
 
-###Job Queue: 
+### Job Queue: 
 Upon receiving the API request, the data should not be immediately saved to the database. Instead, dispatch a Laravel job to process the data. The job should perform the following tasks:
 Save the data to the `submissions` table in the database.
 
-###Events: 
+### Events: 
 After the data is successfully saved to the database, trigger a Laravel event named `SubmissionSaved`. Attach a listener to this event that logs a message indicating a successful save, including the `name` and `email` of the submission.
 
-###Error Handling: 
+### Error Handling: 
 Implement error handling for the API to respond with appropriate messages and status codes for the following scenarios:
 Invalid data input (e.g., missing required fields).
 Any errors that occur during the job processing.
